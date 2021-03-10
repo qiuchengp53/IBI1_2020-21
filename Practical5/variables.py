@@ -1,6 +1,3 @@
-a = "hello "
-b = "world"
-print(a+b)
 a = 241202
 b = 190784
 c = 100321
