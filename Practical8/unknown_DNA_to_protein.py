@@ -35,9 +35,10 @@ for line in xfile:
              step = 3
              for i in range(0,len(n),step):
                  L = L + genetic_code[n[i:i+step]]
-                 output.write(L+'\n')
+                 output.write(L)
+                 L =''
              n = ''
-        output.write(re.search(r'gene:(\w+)',line).group(1)+'     ')
+        output.write('\n'+re.search(r'gene:(\w+)',line).group(1)+'     ')
     elif '>' in line:
         # change Boolean to False to ensure the loop can continue
         Boolean = False
@@ -50,9 +51,9 @@ output.write(str(len(n))+'\n')
 step = 3
 for i in range(0,len(n),step):
     L = L + genetic_code[n[i:i+step]]
-    output.write(L+'\n')
+    output.write(L)
+    L = ''
 # close the file
 xfile.close()
 output.close()
-
 
