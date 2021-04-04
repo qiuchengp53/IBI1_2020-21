@@ -1,0 +1,14 @@
+Question: How have new cases and total cases developed over time in Spain?
+ 
+Answer: to show the result vividly, I make a line chart in covid.py the code is after line 36.
+I will also show it below
+
+# answer the question in question.txt that 'How have new cases and total cases developed over time in Spain?'
+spain_new_cases = covid_data.loc[covid_data["location"] =="Spain","new_cases"]
+spain_total_cases = covid_data.loc[covid_data["location"] =="Spain","total_cases"]
+plt.plot(world_new_cases_date, spain_new_cases, color = 'yellowgreen', marker = '^', label = 'Spain new cases')
+plt.plot(world_new_cases_date, spain_total_cases, color = 'lightblue', marker = '.', label = 'Spain total cases')
+plt.xticks(world_new_cases_date.iloc[0:len(world_new_cases_date):4],rotation = -90)
+plt.legend()
+plt.title('Spain new cases and total cases')
+plt.show()
