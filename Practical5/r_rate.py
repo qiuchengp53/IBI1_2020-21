@@ -6,7 +6,7 @@ n = 84
 r = float (input("r_rate: "))
 #loop
 for i in range (1,6):
-    n = n*r
+    n = n + n*r
 #remove the decimal
 a = str(int(n))
 #output the result
